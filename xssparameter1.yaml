@@ -1,0 +1,52 @@
+id: xssparameter1
+
+info:
+  name: xssparameter1
+  author: kauenavarro
+  severity: medium
+  description: |
+    Verifica parametros ocultos que refletem dentro do HTML da pagina
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cwe-id: CWE-601
+  metadata:
+    max-request: 2
+  tags: fuzzer,kauenavarro,xss
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}?uaa=%27%22%20kaue=fuzz-xss&uam=%27%22%20kaue=fuzz-xss&uafvl=%27%22%20kaue=fuzz-xss&uaw=%27%22%20kaue=fuzz-xss&family=%27%22%20kaue=fuzz-xss&uamb=%27%22%20kaue=fuzz-xss&_v=%27%22%20kaue=fuzz-xss&sid=%27%22%20kaue=fuzz-xss&r=%27%22%20kaue=fuzz-xss&jid=%27%22%20kaue=fuzz-xss&_u=%27%22%20kaue=fuzz-xss&format=%27%22%20kaue=fuzz-xss&a=%27%22%20kaue=fuzz-xss&gdpr_consent=%27%22%20kaue=fuzz-xss&sct=%27%22%20kaue=fuzz-xss&seg=%27%22%20kaue=fuzz-xss&_p=%27%22%20kaue=fuzz-xss&tfd=%27%22%20kaue=fuzz-xss&en=%27%22%20kaue=fuzz-xss&_r=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?ver=%27%22%20kaue=fuzz-xss&v=%27%22%20kaue=fuzz-xss&id=%27%22%20kaue=fuzz-xss&cid=%27%22%20kaue=fuzz-xss&tid=%27%22%20kaue=fuzz-xss&t=%27%22%20kaue=fuzz-xss&gtm=%27%22%20kaue=fuzz-xss&dma=%27%22%20kaue=fuzz-xss&gcd=%27%22%20kaue=fuzz-xss&dl=%27%22%20kaue=fuzz-xss&dt=%27%22%20kaue=fuzz-xss&sr=%27%22%20kaue=fuzz-xss&ul=%27%22%20kaue=fuzz-xss&_s=%27%22%20kaue=fuzz-xss&url=%27%22%20kaue=fuzz-xss&gdpr=%27%22%20kaue=fuzz-xss&z=%27%22%20kaue=fuzz-xss&uap=%27%22%20kaue=fuzz-xss&uapv=%27%22%20kaue=fuzz-xss&uab=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?sh=%27%22%20kaue=fuzz-xss&u_ah=%27%22%20kaue=fuzz-xss&u_aw=%27%22%20kaue=fuzz-xss&u_cd=%27%22%20kaue=fuzz-xss&sw=%27%22%20kaue=fuzz-xss&k=%27%22%20kaue=fuzz-xss&txp=%27%22%20kaue=fuzz-xss&o=%27%22%20kaue=fuzz-xss&ev=%27%22%20kaue=fuzz-xss&ea=%27%22%20kaue=fuzz-xss&uach=%27%22%20kaue=fuzz-xss&it=%27%22%20kaue=fuzz-xss&if=%27%22%20kaue=fuzz-xss&slf_rd=%27%22%20kaue=fuzz-xss&alt=%27%22%20kaue=fuzz-xss&output=%27%22%20kaue=fuzz-xss&vis=%27%22%20kaue=fuzz-xss&u_tz=%27%22%20kaue=fuzz-xss&ref=%27%22%20kaue=fuzz-xss&auid=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?cms_redirect=%27%22%20kaue=fuzz-xss&mip=%27%22%20kaue=fuzz-xss&redirect_counter=%27%22%20kaue=fuzz-xss&cmsv=%27%22%20kaue=fuzz-xss&evid=%27%22%20kaue=fuzz-xss&fvd=%27%22%20kaue=fuzz-xss&vsi=%27%22%20kaue=fuzz-xss&oid=%27%22%20kaue=fuzz-xss&adk=%27%22%20kaue=fuzz-xss&correlator=%27%22%20kaue=fuzz-xss&ptt=%27%22%20kaue=fuzz-xss&rl=%27%22%20kaue=fuzz-xss&language=%27%22%20kaue=fuzz-xss&idt=%27%22%20kaue=fuzz-xss&rqm=%27%22%20kaue=fuzz-xss&bih=%27%22%20kaue=fuzz-xss&biw=%27%22%20kaue=fuzz-xss&coo=%27%22%20kaue=fuzz-xss&bc=%27%22%20kaue=fuzz-xss&locale=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?fbp=%27%22%20kaue=fuzz-xss&ler=%27%22%20kaue=fuzz-xss&ifi=%27%22%20kaue=fuzz-xss&scr_x=%27%22%20kaue=fuzz-xss&scr_y=%27%22%20kaue=fuzz-xss&ga_hid=%27%22%20kaue=fuzz-xss&u_sd=%27%22%20kaue=fuzz-xss&pvsid=%27%22%20kaue=fuzz-xss&nvt=%27%22%20kaue=fuzz-xss&ga_sid=%27%22%20kaue=fuzz-xss&ga_vid=%27%22%20kaue=fuzz-xss&ga_fc=%27%22%20kaue=fuzz-xss&dmc=%27%22%20kaue=fuzz-xss&height=%27%22%20kaue=fuzz-xss&ssl=%27%22%20kaue=fuzz-xss&abxe=%27%22%20kaue=fuzz-xss&lang=%27%22%20kaue=fuzz-xss&ir=%27%22%20kaue=fuzz-xss&shop=%27%22%20kaue=fuzz-xss&e=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?_gid=%27%22%20kaue=fuzz-xss&gjid=%27%22%20kaue=fuzz-xss&frm=%27%22%20kaue=fuzz-xss&u_w=%27%22%20kaue=fuzz-xss&u_h=%27%22%20kaue=fuzz-xss&_ss=%27%22%20kaue=fuzz-xss&_fv=%27%22%20kaue=fuzz-xss&aip=%27%22%20kaue=fuzz-xss&cb=%27%22%20kaue=fuzz-xss&l=%27%22%20kaue=fuzz-xss&fmt=%27%22%20kaue=fuzz-xss&cx=%27%22%20kaue=fuzz-xss&c=%27%22%20kaue=fuzz-xss&key=%27%22%20kaue=fuzz-xss&cv=%27%22%20kaue=fuzz-xss&rn=%27%22%20kaue=fuzz-xss&sd=%27%22%20kaue=fuzz-xss&pid=%27%22%20kaue=fuzz-xss&vp=%27%22%20kaue=fuzz-xss&je=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?w=%27%22%20kaue=fuzz-xss&de=%27%22%20kaue=fuzz-xss&eid=%27%22%20kaue=fuzz-xss&h=%27%22%20kaue=fuzz-xss&lmt=%27%22%20kaue=fuzz-xss&width=%27%22%20kaue=fuzz-xss&ts=%27%22%20kaue=fuzz-xss&guid=%27%22%20kaue=fuzz-xss&bg=%27%22%20kaue=fuzz-xss&token=%27%22%20kaue=fuzz-xss&random=%27%22%20kaue=fuzz-xss&fst=%27%22%20kaue=fuzz-xss&client=%27%22%20kaue=fuzz-xss&async=%27%22%20kaue=fuzz-xss&ei=%27%22%20kaue=fuzz-xss&cpn=%27%22%20kaue=fuzz-xss&ns=%27%22%20kaue=fuzz-xss&domain=%27%22%20kaue=fuzz-xss&s=%27%22%20kaue=fuzz-xss&cver=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?display=%27%22%20kaue=fuzz-xss&tiba=%27%22%20kaue=fuzz-xss&_ee=%27%22%20kaue=fuzz-xss&p=%27%22%20kaue=fuzz-xss&_=%27%22%20kaue=fuzz-xss&version=%27%22%20kaue=fuzz-xss&_eu=%27%22%20kaue=fuzz-xss&fexp=%27%22%20kaue=fuzz-xss&sig=%27%22%20kaue=fuzz-xss&_nc_x=%27%22%20kaue=fuzz-xss&source=%27%22%20kaue=fuzz-xss&_nsi=%27%22%20kaue=fuzz-xss&_slc=%27%22%20kaue=fuzz-xss&us_privacy=%27%22%20kaue=fuzz-xss&size=%27%22%20kaue=fuzz-xss&name=%27%22%20kaue=fuzz-xss&pl=%27%22%20kaue=fuzz-xss&src=%27%22%20kaue=fuzz-xss&range=%27%22%20kaue=fuzz-xss&n=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?page-url=%27%22%20kaue=fuzz-xss&browser-info=%27%22%20kaue=fuzz-xss&mh=%27%22%20kaue=fuzz-xss&wmode=%27%22%20kaue=fuzz-xss&hl=%27%22%20kaue=fuzz-xss&callback=%27%22%20kaue=fuzz-xss&ip=%27%22%20kaue=fuzz-xss&pv=%27%22%20kaue=fuzz-xss&data=%27%22%20kaue=fuzz-xss&ec=%27%22%20kaue=fuzz-xss&uid=%27%22%20kaue=fuzz-xss&mv=%27%22%20kaue=fuzz-xss&mn=%27%22%20kaue=fuzz-xss&mt=%27%22%20kaue=fuzz-xss&ms=%27%22%20kaue=fuzz-xss&hn=%27%22%20kaue=fuzz-xss&mime=%27%22%20kaue=fuzz-xss&mm=%27%22%20kaue=fuzz-xss&expire=%27%22%20kaue=fuzz-xss&sparams=%27%22%20kaue=fuzz-xss"
+      - "{{BaseURL}}?xpc=%27%22%20kaue=fuzz-xss&itag=%27%22%20kaue=fuzz-xss&mvi=%27%22%20kaue=fuzz-xss&lsig=%27%22%20kaue=fuzz-xss&requiressl=%27%22%20kaue=fuzz-xss&lsparams=%27%22%20kaue=fuzz-xss&vprv=%27%22%20kaue=fuzz-xss&spc=%27%22%20kaue=fuzz-xss&svpuc=%27%22%20kaue=fuzz-xss&alr=%27%22%20kaue=fuzz-xss&pot=%27%22%20kaue=fuzz-xss&keepalive=%27%22%20kaue=fuzz-xss&ump=%27%22%20kaue=fuzz-xss&srfvp=%27%22%20kaue=fuzz-xss&rbuf=%27%22%20kaue=fuzz-xss&dur=%27%22%20kaue=fuzz-xss&gir=%27%22%20kaue=fuzz-xss&st=%27%22%20kaue=fuzz-xss&clen=%27%22%20kaue=fuzz-xss&u_his=%27%22%20kaue=fuzz-xss"
+
+
+    stop-at-first-match: true
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "'\" kaue"
+
+      - type: word
+        words:
+          - "text/html"
+        part: header
+
+        condition: and
+
+      - type: status
+        status:
+          - 200
+          - 404
+          - 400
+          - 500
